@@ -24,7 +24,7 @@ class equipment(Base):
     """ equipment is referring to which aircraft the respective airline is using"""
     name = Column(String(80), nullable=False)
     id = Column(Integer, primary_key=True)
-    
+
     airline_id = Column(Integer, ForeignKey('airline.id'))
     airlinerelation = relationship(airline)
 
@@ -34,6 +34,7 @@ class equipment(Base):
         return {
             'name': self.name,
             'id': self.id,
+            
         }
 engine = create_engine('sqlite:///airline.db')
 
