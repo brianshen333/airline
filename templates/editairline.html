@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {{airlines.name}}
+    <form action="{{url_for('editairline',airline_id = airlines.id)}}" method = "post">
+      <input type = "text" name="name" value="{{airline.name}}">
+      <button type="submit">submit</button>
+
+    </form>
+  </body>
+</html>

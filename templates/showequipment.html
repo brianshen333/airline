@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {{airlines.name}}
+    <a href = '{{url_for('newequipment',airline_id=airlines.id) }}'>
+       <button> Create new equipment </button></a>
+       <br>
+    {% for equipment in equipments %}
+
+    {{equipment.name}}
+    <br>
+    <a href = '{{url_for('editequipment', airline_id =airlines.id, equipment_id = equipment.id)}}'>
+     <button>Edit equipment </button></a>
+     <br>
+    <a href = '{{url_for('deleteequipment', airline_id =airlines.id,equipment_id=equipment.id)}}'>
+    <button>Delete equipment</button></a>
+    <br>
+
+    </button></a>
+    <br>
+    {%endfor%}
+  </body>
+</html>
