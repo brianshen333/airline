@@ -27,7 +27,7 @@
         $('#signinButton').attr('style','display:none');
       }
       $.ajax({
-        type: 'POST';
+        type: 'POST',
         url: '/gconnect?state={{STATE}}',
         processData: false,
         contentType: 'application/octet-stream; charset=utf-8',
@@ -37,7 +37,7 @@
         if (result) {
           $('#result').html('Login Successful!</br>'+ result + '</br>Redirecting...')
          setTimeout(function() {
-          window.location.href = "/airlines";
+          window.location.href = "/airlines/";
          }, 4000);
 
       } else if (authResult['error']) {
